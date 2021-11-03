@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <style>
+    .container{
+      width: 100vw;
+      height: 100wh;
+    }
+    .btn{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      padding: 5px;
+      width: 200px;
+      height: 50px;
+      background-color: transparent;
+      position: relative;
+      align-items: center;
+      overflow: hidden;
+    }
+    /* Translate Y */
+    .btn__translateY::after{
+      transition: all 2s;
+      position: absolute;
+      width: 100%; 
+      height: 100%;
+      top: 0;
+      left: 0;
+      content: "YEAH!";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: red;
+      transform: translateY(-100%);
+      transition: all 2s ease-out;
+      transform-origin: top left;
+    }
+    .btn__translateY:hover::after{
+      transform: translateY(0);
+    }
+
+      /* Translate */
+      .btn__translate::after{
+      transition: all 2s;
+      position: absolute;
+      width: 100%; 
+      height: 100%;
+      top: 0;
+      left: 0;
+      content: "";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      transform: translate(-100%);
+      transition: all 2s ease-out;
+      transform-origin: top left;
+      z-index: -1;
+    }
+    .btn__translate:hover{
+      color: white;
+    }
+    .btn__translate:hover::after{
+      transform: translateY(0);
+      color: white;
+    }
+
+    /* Rotate */
+    .btn__rotate::after{
+      transition: all 2s;
+      position: absolute;
+      width: 100%; 
+      height: 100%;
+      top: 0;
+      left: 0;
+      content: "";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: yellow;
+      transform: Rotate(-90deg);
+      transition: all 2s ease-out;
+      transform-origin: top left;
+      z-index: -1;
+    }
+    .btn__rotate:hover{
+      color: black;
+    }
+    .btn__rotate:hover::after{
+      transform: Rotate(0);
+      color: white;
+    }
+      /* Scale & Opacity */
+      .btn__scale::after{
+      content: "Scale & Opacity";
+      transition: all 2s;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      width: 100%; 
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform: Scale(2);
+      transition: all 2s ease-out;
+    }
+    .btn__scale:hover::after{
+      transform: scale(1);
+      opacity: 1;
+      background-color: black;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="btn btn__rotate">Rotate</button>
+    <button class="btn btn__translate">Translate</button>
+    <button class="btn btn__scale">Scale & Opacity</button>
+    <button class="btn btn__translateY">Translate Y</button>
+  </div>
+</body>
+</html>

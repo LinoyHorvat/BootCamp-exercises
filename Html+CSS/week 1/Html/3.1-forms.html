@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forms &amp; Input</title>
+</head>
+<body>
+  <h1>Create an Account</h1>
+  <form action="process.php">
+    <!-- Email -->
+    <div>
+      <label for="email">Email</label><br>
+      <input type="email" name="email" id="email">
+    </div>
+    <br>
+    <!-- Password -->
+    <div>
+      <label for="Password">Password</label><br>
+      <input type="text" id="Password" name="Password">
+    </div>
+    <br>
+    <!-- Select Age -->
+    <div>
+      <label for="Age">Age</label>
+      <select name="Age" id="Age">
+        <option value="0-20">0-20</option>
+        <option value="20-50" selected="">20-50</option>
+        <option value="50+">50+</option>
+      </select>
+    </div>
+    <br>
+    <!-- Textarea -->
+    <div>
+      <label for="Tell us a little about yourself">Tell us a little about yourself</label><br>
+      <textarea name="Tell us a little about yourself" id="Tell us a little about yourself" cols="50" rows="5"></textarea>
+    </div>
+    <br>
+    <!-- Number -->
+    <div>
+      <label for="age">Age</label><br>
+      <input type="number" name="age" id="age">
+    </div>
+    <br>
+    <!-- Checkbox -->
+    <div>
+      <input type="checkbox" name="likes" value="I agree to the" id="likes"> I agree to the
+      <label style="color:blue"> <u>terms of service</u></label>
+    </div>
+    <br>
+    <!-- Input Sign up -->
+    <input type="Sign up" value="Sign up">
+  </form>
+
+</body></html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p {
+      padding: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 20px;
+    }
+    span{
+      color: blueviolet;
+    }
+    span:hover::before{
+      position: absolute;
+      top:1em;
+      color: blue;
+      content: "This is tooltip";
+      background: yellow;
+      border-radius: 10px;
+      width: 7em;
+      text-align: center;
+    }
+    span:hover::after{
+      position: absolute;
+      content: "";
+      background-color: yellow;
+      top: 2em;
+      height: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>
+      Lorem ipsum <span>sitkksdjdjks</span>  amet consectetur adipisicing elit. Autem odio cum neque, eius iusto perferendis nesciunt assumenda, quia quos quae perspiciatis, sit ea obcaecati aliquam similique aut sunt non vitae.
+    </p>
+  </div>
+</body>
+</html>
