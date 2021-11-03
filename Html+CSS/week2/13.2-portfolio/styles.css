@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+body
+{
+  margin: 0px;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Source Code Pro', monospace; 
+  /* background-color: cornsilk; */
+  background-image: url("/Img/background.jpeg")
+}
+.navbar{
+  padding: 10px;
+  text-align: center;
+}
+.navbar a{
+  font-size: 2vw;
+  padding: 20px;
+  margin-left: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.headers h1{
+  font-size: 5vw;
+}
+.headers h2{
+  font-size: 3vw;
+}
+.card {
+  font-size: 2vw;
+  margin-top: 15px;
+  margin-bottom: 1px;
+  border: 1px solid ;
+  padding: 1px;
+  background-color: #cccccc;
+  padding: 16px;
+  text-align: justify;
+  text-align: center;
+}
+
+.links{
+  font-size: 2vw;
+  text-align: left;
+}
+.links h3{
+  text-align: left;
+}
+.button{
+  text-align: center;
+  align-self: center;
+  font-family: 'Source Code Pro', monospace;    
+}
+
+@media(max-width: 500px){
+  .navbar a, .headers h1, .headers h2, .card,.links{
+    font-size: clamp(1rem, -0.875rem + 8.333vw, 3.5rem);
+}
