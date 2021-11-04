@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+}
+  .gallery{
+      margin: 0;
+      padding: 0;
+      display: grid;
+      height: 100vh;
+      width: 100vw;
+      grid-template-columns: repeat(8,1fr);
+      grid-template-rows: repeat(7,5vw);
+      grid-gap: 1rem;
+      grid-template-areas:
+      'gallery__item--1 gallery__item--1 gallery__item--2 gallery__item--2 gallery__item--2 gallery__item--3 gallery__item--4 gallery__item--4'
+      'gallery__item--1 gallery__item--1 gallery__item--2 gallery__item--2 gallery__item--2 gallery__item--3 gallery__item--4 gallery__item--4'
+      'gallery__item--5 gallery__item--5 gallery__item--2 gallery__item--2 gallery__item--2 gallery__item--6 gallery__item--6 gallery__item--7'
+      'gallery__item--5 gallery__item--5 gallery__item--8 gallery__item--8 gallery__item--9 gallery__item--6 gallery__item--6 gallery__item--7'
+      'gallery__item--5 gallery__item--5 gallery__item--8 gallery__item--8 gallery__item--10 gallery__item--10 gallery__item--10 gallery__item--7'
+      'gallery__item--11 gallery__item--12 gallery__item--12 gallery__item--13 gallery__item--10 gallery__item--10 gallery__item--10 gallery__item--14'
+      'gallery__item--11 gallery__item--12 gallery__item--12 gallery__item--13 gallery__item--10 gallery__item--10 gallery__item--10 gallery__item--14'
+      ;
+    }
+    .gallery__img {
+      /* padding: 10px; */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block; 
+
+    }
+  
+    .gallery__item--1{
+      grid-area: gallery__item--1;
+    }
+    .gallery__item--2{
+      grid-area: gallery__item--2;
+    }
+    .gallery__item--3{
+      grid-area: gallery__item--3;
+    }
+    .gallery__item--4{
+      grid-area: gallery__item--4;
+    }
+    .gallery__item--5{
+      grid-area: gallery__item--5;
+    }
+    .gallery__item--6{
+      grid-area: gallery__item--6;
+    }
+    .gallery__item--7{
+      grid-area: gallery__item--7;
+    }
+    .gallery__item--8{
+      grid-area: gallery__item--8;
+    }
+    .gallery__item--9{
+      grid-area: gallery__item--9;
+    }
+    .gallery__item--10{
+      grid-area: gallery__item--10;
+    }
+    .gallery__item--11{
+      grid-area: gallery__item--11;
+    }
+    .gallery__item--12{
+      grid-area: gallery__item--12;
+    }
+    .gallery__item--13{
+      grid-area: gallery__item--13;
+    }
+    .gallery__item--14{
+      grid-area: gallery__item--14;
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="gallery">
+      <figure class="gallery__item gallery__item--1">
+        <img src="images/gal-1.jpeg" class="gallery__img" alt="img1">
+      </figure>
+      <figure class="gallery__item gallery__item--2">
+        <img src="images/gal-2.jpeg" class="gallery__img" alt="img2">
+      </figure>
+      <figure class="gallery__item gallery__item--3">
+        <img src="images/gal-3.jpeg" class="gallery__img" alt="img3">
+      </figure>
+      <figure class="gallery__item gallery__item--4">
+        <img src="images/gal-4.jpeg" class="gallery__img" alt="img4">
+      </figure>
+      <figure class="gallery__item gallery__item--5">
+        <img src="images/gal-5.jpeg" class="gallery__img" alt="img5">
+      </figure>
+      <figure class="gallery__item gallery__item--6">
+        <img src="images/gal-6.jpeg" class="gallery__img" alt="img6">
+      </figure>
+      <figure class="gallery__item gallery__item--7">
+        <img src="images/gal-7.jpeg" class="gallery__img" alt="img7">
+      </figure>
+      <figure class="gallery__item gallery__item--8">
+        <img src="images/gal-8.jpeg" class="gallery__img" alt="img8">
+      </figure>
+      <figure class="gallery__item gallery__item--9">
+        <img src="images/gal-9.jpeg" class="gallery__img" alt="img9">
+      </figure>
+      <figure class="gallery__item gallery__item--10">
+        <img src="images/gal-10.jpeg" class="gallery__img" alt="img10">
+      </figure>
+      <figure class="gallery__item gallery__item--11">
+        <img src="images/gal-11.jpeg" class="gallery__img" alt="img11">
+      </figure>
+      <figure class="gallery__item gallery__item--12">
+        <img src="images/gal-12.jpeg" class="gallery__img" alt="img12">
+      </figure>
+      <figure class="gallery__item gallery__item--13">
+        <img src="images/gal-13.jpeg" class="gallery__img" alt="img13">
+      </figure>
+      <figure class="gallery__item gallery__item--14">
+        <img src="images/gal-14.jpeg" class="gallery__img" alt="img14">
+      </figure>
+    </div>
+  </div>
+  
+</body>
+</html>
