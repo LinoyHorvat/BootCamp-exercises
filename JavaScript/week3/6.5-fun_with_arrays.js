@@ -24,8 +24,11 @@ console.log(object2);
 console.log(Array.isArray(arr3));
 
 // q6 -Create a copy of an array that won’t effect the original array if modified.
+console.log(arr3);
 const arr4 = arr3; 
-arr4[0] = 'd'
+arr4.push('d');
 console.log(arr4);
+console.log(arr3);
+
 
 
