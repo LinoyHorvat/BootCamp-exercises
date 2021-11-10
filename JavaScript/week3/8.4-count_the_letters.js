@@ -7,10 +7,9 @@ function keyCount(array){
   const dic = {};
   for (let word of array){
     for (let letter of word){
-      if (letter.toLowerCase() in dic){
-        dic[letter.toLowerCase()] += 1;
+      if (letter.toLowerCase() != letter.toUpperCase()){
+        (letter.toLowerCase() in dic ? dic[letter.toLowerCase()] += 1 : dic[letter.toLowerCase()] = 1)
       }
-      else dic[letter.toLowerCase()] = 1; 
     }
   }
   return dic;
