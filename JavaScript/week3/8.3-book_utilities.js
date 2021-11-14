@@ -10,20 +10,16 @@ const bookB ={
   year: 2016
 };
 // 2. create an empty object bookUtils (utils = short for utilities).
+const bookUtils ={};
 // 3. add to to the bookUtils object a function getFirstPublished, that recieves 2 books and returns the book with the smaller year.
-const bookUtils ={
-  getFirstPublished(book1, book2) {
-    return book1.year >= book2.year ? book1 : book2;
-  }
+function getFirstPublished(book1, book2) {
+  return book1.year >= book2.year ? book1 : book2;
 }
-// bookUtils.getFirstPublished =getFirstPublished;
-bookUtils.getFirstPublished();
+bookUtils.getFirstPublished() = getFirstPublished;
+
 
 // 4. add to to the bookUtils object a function setNewEdition, that recieves a book and an edition year and sets a new property latestEdition with the edition year, or updates an existing one.
 
-// function setNewEdition(book, year){
-//   this.
-// }
 
 // 5. add to to the bookUtils object a setLanguage function, that recieves a book and a language and sets a new property language with the languahe, or updates an existing one.
 
