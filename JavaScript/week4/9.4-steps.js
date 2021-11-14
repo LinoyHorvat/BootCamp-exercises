@@ -8,4 +8,4 @@ function steps(n){
     console.log(step);
   }
 }
-steps(6);
+steps(3);
