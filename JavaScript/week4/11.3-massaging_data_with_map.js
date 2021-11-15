@@ -49,6 +49,7 @@ function returnName(data){
 console.log(returnName(data));
 
 // 2. Create a function that returns all the objects that are born before 1990.
+
 function checkBirthday(date){
   var year = date.slice(date.length -4)
   return year < 1990 ? true : false
