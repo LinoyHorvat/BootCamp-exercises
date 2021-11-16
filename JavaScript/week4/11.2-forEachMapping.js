@@ -56,6 +56,7 @@ function shiftLetters(str){
   })
   return arr.join('');
 }
+
 // 7. Create a function called swapCase that takes a string as an argument and returns a string that every other word is capitalized. (you can use the fifth’s exercise's function to keep it dry)
 
 function swapCase(str){
