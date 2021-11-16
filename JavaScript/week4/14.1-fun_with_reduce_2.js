@@ -2,16 +2,18 @@
 // 1 Write a function called extractOnlyValue which accepts an array of objects and a key and returns a new array with the value of each object at the key
 
 arr = [
-  {key1: 'value1'},
-  {key2: 'value2'},
-  {key3: 'value3'}
+  { name: "value1", status: true },
+  { name: "value2", status: true },
+  { name: "value3", status: true },
 ];
 
-const switch1 = (key, val) => {val: 'key'};
+// const switch1 = (key, val) => {val: 'key'};
 
-function extractOnlyValue (arr){
-  const arr2 = arr.reduce((key, val) => {val: 'key'},[]);
-  return arr2;
+function extractOnlyValue(arr, key) {
+  return arr.reduce((acc, cur) => {
+    acc.push(cur[key]);
+    return acc;
+  }, []);
 }
 
-console.log(extractOnlyValue (arr));
+console.log(extractOnlyValue(arr, "name"));
