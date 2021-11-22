@@ -71,5 +71,11 @@
 //   }
 // }
 
+const reverseString = (str) =>{
+  return str ? reverseStr(str.substr(1)) + str[0] : str;
+}
+
+const res = reverseString ("abc");
+console.log(res);
 // const arrOfStr = ['a','b','c']
 // console.log(reverseStr(arrOfStr));
