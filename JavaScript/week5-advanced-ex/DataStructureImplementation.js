@@ -72,17 +72,23 @@ class Array {
       return value;
     } else return "Can't pop because array is empty";
   }
-  contains(x){}
+  contains(x){
+  }
   addToStart(x){}
   addToEnd(x){}
   isFull(){}
   removeFirst(x){}
 }
 const array1 = new Array();
-array1.push(2);
-array1.push(3);
-array1.push(4);
-console.log(array1);
+// array1.push(2);
+// array1.push(3);
+// array1.push(4);
+// console.log(array1);
 // console.log(array1.pop());
 
 // Linked List
+class LinkedList {
+}
+class ListNode {
+
+}

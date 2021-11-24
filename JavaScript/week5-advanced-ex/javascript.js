@@ -1,3 +1,10 @@
+// A string S consisting of N characters is considered to be properly nested if any of the following conditions is true:
+
+// S is empty;
+// S has the form "(U)" or "[U]" or "{U}" where U is a properly nested string;
+// S has the form "VW" where V and W are properly nested strings.
+
+
 function solution(s) {
   const stack = [];
   for (let i = 0; i < s.length; i++) {
@@ -13,12 +20,10 @@ function solution(s) {
 }
 
 function isOpening(s) {
-  //returns true or false
   return s === "{" || s === "[" || s === "(" ? true : false;
 }
 
 function isBracket(s) {
-  // returns true or false
   return s == "{" ||
     s === "[" ||
     s === "(" ||
@@ -43,7 +48,9 @@ function checkIfOpenMatchClose(open, close) {
 // let s = "([)()]" ;
 // let s = "0K )'s +÷ )( + ()";
 // let s = "0K ('s + )( + ())";
-let s = "{{{{";
+// let s = "{{{{";
 // let s = "{}" ;
 
-console.log(solution(s));
+// console.log(solution(s));
+
+
