@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" maxlength=3 placeholder="Enter your age">
+  <button class="submit">Submit</button>
+  <div class="answer-txt"></div>
+  <script>
+    let age = document.querySelector("input");
+    let answerTxt = document.querySelector(".answer-txt");
+    let btn = document.querySelector(".submit");
+    btn.addEventListener("click", () => {
+      if (age.value >= 18) {
+        answerTxt.innerHTML = "you can drink appear" }
+      else {answerTxt.innerText = "you’re too young"};
+      
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <script src="/18.3-selecting_all_elements.js"></script> -->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" / >
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Modifying Elements</title>
+  </head>
+  <body>
+    <div id="myFirstDiv">1</div>
+    <div id="mySecondDiv">2</div>
+    <div id="myThridDiv">3</div>
+    <div id="myFourthDiv">4</div>
+  </body>
+  <script>
+    //your js code here
+  </script>
+</html>
+
+<!-- const allDiv = document.querySelectorAll("div"); -->
+
+const allDiv = document.querySelectorAll("div");
+for (let i = 0 ; i < allDiv.length; i++){
+  allDiv[i].id = allDiv[i].id;
+}

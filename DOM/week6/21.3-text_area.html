@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      height: 200px;
+      width: 200px;
+    }
+    .message {
+      color: red;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div>Why are you interested in this position?</div>
+  <input type="text"></input>
+</br>
+  <div class="message">must enter at least 100 characters before clicking the button</div>
+  <button>Click Here!</button>
+  <script>
+     let inputTxt = document.querySelector("input");
+     let button = document.querySelector("button");
+     let message = document.querySelector(".message")
+     button.addEventListener("click", () => {
+       if (inputTxt.value.length < 100) {message.style.display= "block"}
+       else message.style.display= "none"
+     });
+
+  </script>
+</body>
+</html>

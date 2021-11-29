@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .big-box{
+      border: 1px solid black;
+      height: 100px;
+      max-width: 400px;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      text-align:center;
+    }
+    .boxes{
+      max-width: 400px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .val-box{
+      font-size: 30px;
+      text-align:center;
+      border: 1px solid black;
+      height: 40px;
+      width: 40px;
+      cursor: pointer;
+    }
+    button{
+      align-self: center;
+      max-width: 100px;
+    }
+    .box{
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>123456</h1>
+  <div class="big-box">
+    <div class="boxes">
+      <input type="text" maxlength = "1" class="val-box"></input>
+      <input type="text" maxlength = "1" class="val-box"></input>
+      <input type="text" maxlength = "1" class="val-box"></input>
+      <input type="text" maxlength = "1" class="val-box"></input>
+      <input type="text" maxlength = "1" class="val-box"></input>
+      <input type="text" maxlength = "1" class="val-box"></input>
+    </div>
+    <button>Verify
+      <input type="submit"></input>
+    </button>
+  </div>
+</body>
+
+<script>
+const inputs = document.querySelectorAll(".val-box");
+
+inputs.forEach((input, index) => {
+  input.addEventListener('pase',(event) => {
+    const paste = event.clipboardData.getData('text');
+    const pasteArr = paste.split('');
+    for (let i = index; i < pasteArr.length; i++) {
+      inputs[i].value = pasteArr[i];
+    }});
+    input.addEventListener('keyup', (event) => {
+      if (inputs.nextElementSibling && input.value){
+        inputs.nextElementSibling.focus();
+      }})});
+</script>
+</html>
