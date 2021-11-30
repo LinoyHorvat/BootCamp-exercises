@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .questionBox{
+      border: 1px solid black;
+      margin: 20px;
+      padding: 20px;
+    }
+    .guessesArr{
+      font-size: 16px;
+    }
+    .h2Txt{
+      margin: 20px;
+      font-size:24px;
+      font-weight:bold;
+    }
+    .userTxt{
+      font-size: 18px;
+      text-align: center;
+    }
+    button{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome To Guess My Letter</h1>
+  <div class="questionBox">?</div>
+  <div class="userTxt">Guess a letter</div>
+  <div class = "h2Txt">Keys guessed</div>
+  <div class="guessesArr"></div>
+  <button>Yes</button>
+  <script src = "/22.3- guess_my_letter.js"></script>
+</body>
+</html>

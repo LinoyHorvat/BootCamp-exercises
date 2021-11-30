@@ -7,7 +7,21 @@
   <title>Document</title>
 </head>
 <body>
-  
-  
+  <h1>Click on the bulb to turn in on or off</h1>
+  <button class="img"><img src = "/OFFbulb.jpeg"></button>
+  <script>
+    const bulbImg = document.querySelector('img');
+    let click = 0 ; 
+    bulbImg.addEventListener('click',() => { 
+      if (click % 2 == 0) {
+        click ++;
+        bulbImg.src="/OFFbulb.jpeg"
+      }
+      else {
+        click ++
+        bulbImg.src="/ONbulb.jpeg"
+      }
+    })
+  </script>
 </body>
 </html>

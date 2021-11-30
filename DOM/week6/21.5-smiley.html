@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>How many smileys do you want to see?</h1>
+  <input type="text"><button>submit</button></input>
+</br>
+</br>
+<div class="images"></div>
+  <script>
+    const input = document.querySelector("input");
+    const submitBtn = document.querySelector("button");
+    const imgDiv = document.querySelector('.images');
+    
+    submitBtn.addEventListener('click',() => (addSmiley(input.value)));
+    
+    function addSmiley(n){
+      if (isNaN(n)) imgDiv.innerHTML = (n + " is not a number");
+    else {
+      imgDiv.innerHTML = '';
+      for (let i = 0; i < n; i++) {
+        const smileysImg = new Image()
+        smileysImg.src  = '/smiley.png';
+        smileysImg.classList.add('images');
+        imgDiv.appendChild(smileysImg);
+    }}
+} 
+  </script>
+</body>
+</html>
