@@ -1,17 +1,30 @@
 import React, {Component} from 'react';
+import { BrowserRouter, Route, Router } from 'react-router-dom';
 import axios from 'axios'
 import ReactDOM from 'react-dom';
-// import Player from './Player'
+import Header from './Header'
+import Homepage from './Homepage'
+import Products from './Products'
+
+const pageOne = () => {
+  return <div>PageOne</div>
+}
+const pageTwo = () => {
+  return <div>pageTwo</div>
+}
+
 
 class App extends Component {
-  componentDidMount(){
-    this.nameInput.focus();
-  }
 
   render() {
     return (
       <div>
-       <input ref={(input) => { this.nameInput = input; }}></input>  
+      <BrowserRouter> 
+      <div>
+      <Route path="/" exact component = {pageOne} />
+      <Route path="/pageTwo" exact component = {pageTwo} />
+      </div>
+      </BrowserRouter>
       </div>
     )
   }
