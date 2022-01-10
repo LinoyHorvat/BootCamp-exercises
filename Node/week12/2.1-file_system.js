@@ -17,5 +17,6 @@ fs.readdir('../week12', (err, files) => {
     console.log(file);
   });
 });
-
 // 5. Find out and implement another method for the fs module.
+
+
