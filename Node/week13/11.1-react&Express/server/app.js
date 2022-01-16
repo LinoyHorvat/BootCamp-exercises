@@ -55,6 +55,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(5000, () => {
-    console.log('Server is up on port 5000.')
+app.listen(3001, () => {
+    console.log('Server is up on port 3001.')
 })
