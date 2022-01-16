@@ -8,6 +8,11 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("hello world");
 });
+app.get("/numbers", (req, res) => {
+  //automatically gives you the type header and dont need to stringify the json
+  res.send(users);
+});
+
 app.get("/users", (req, res) => {
   //automatically gives you the type header and dont need to stringify the json
   res.send(users);
