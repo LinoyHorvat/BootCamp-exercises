@@ -1,15 +1,14 @@
 {
-  "name": "13.2-BlogData",
+  "name": "mongo",
   "version": "1.0.0",
-  "description": "",
-  "main": "13.2-Blog Data.js",
+  "main": "blog.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongodb": "^3.7.3"
-  }
+    "mongodb": "^3.6.6"
+  },
+  "description": ""
 }
