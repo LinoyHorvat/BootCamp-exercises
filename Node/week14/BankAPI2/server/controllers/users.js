@@ -44,16 +44,36 @@ const getAllUsers = async (req, res)=>{
       await user.save();
       const user2 = await User.findById(id);
       res.send(user2);
-      console.log(user2);
     }
     catch(err) {res.status(400).send(err);}
   };
 
+  const updateUser = async (req, res) => {
+    const { id } = req.params;
+    const updates = Object.keys(req.body)
+    const allowedUpdates = ['name', 'email', 'password', 'age']
+    const isValidOperation = updates.every((update)=> allowedUpdates.includes(update))
+    if (!isValidOperation){
+      return res.status(400).send({ error: 'Invalid updates'})
+    }
+    try{
+      const user = await User.findById(id)
+      updates.forEach((update) => user[update] = req.body[update])
+      await user.save()
+      res.send(user);
+
+      if (!user){
+        return res.status(404).send()
+      }
+    }
+    catch(err) {res.status(400).send(err)}
+  }
 
 
   module.exports = {
     getAllUsers, 
     addUser, 
     addCash,
-    getUser
+    getUser,
+    updateUser
   }

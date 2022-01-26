@@ -1,14 +1,18 @@
 const express = require('express');
 const userRouter = express.Router();
-const bank = require('../controllers/users')
+const users = require('../controllers/users')
 
 
 // user routes
-userRouter.get('/', bank.getAllUsers)
-userRouter.post('/', bank.addUser)
-userRouter.get('/:id', bank.getUser)
+userRouter.get('/', users.getAllUsers)
+userRouter.post('/', users.addUser)
+userRouter.get('/:id', users.getUser)
+
+// added for authentication
+userRouter.patch('/:id', users.updateUser);
+
 
 // bank routes
-userRouter.put('/cash/:id', bank.addCash)
+userRouter.put('/cash/:id', users.addCash)
 
 module.exports = userRouter;

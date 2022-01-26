@@ -24,9 +24,10 @@ function App() {
       return (
         <div key={key}>
         <User 
-        cash = {user.cash} 
-        credit = {user.credit} 
-        userId={user.userId}
+        name = {user.name} 
+        password = {user.password}
+        email = {user.email}
+        cash={user.cash}
         addCash = {()=>addCash(user._id)}
         amount = {amount}
         setAmount = {setAmount}
