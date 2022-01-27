@@ -10,7 +10,7 @@ userRouter.get('/:id', users.getUser)
 
 // added for authentication
 userRouter.patch('/:id', users.updateUser);
-
+userRouter.post('/login', users.login)
 
 // bank routes
 userRouter.put('/cash/:id', users.addCash)
